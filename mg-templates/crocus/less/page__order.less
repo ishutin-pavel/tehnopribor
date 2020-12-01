@@ -1,0 +1,282 @@
+/* page order
+------------------------------------------------------------------- */
+.j-order {
+
+	&__table {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		padding: 10px;
+		background: @c-white;
+		border: 1px solid @c-gray;
+		border-bottom: 0;
+		border-top-left-radius: @border-radius;
+		border-top-right-radius: @border-radius;
+
+		@media @800 {
+			font-size: @body-font-size - 1px;
+		}
+
+		@media @700 {
+			font-size: @body-font-size;
+		}
+
+		&__wrapper {
+			display: flex;
+		}
+
+		&__row {
+			display: flex;
+			align-items: center;
+			width: 100%;
+    		margin-bottom: 10px;
+    		padding-bottom: 10px;
+			border-bottom: 1px dotted @c-gray;
+
+			@media @700 {
+				flex-wrap: wrap;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+				border-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+
+		&__img {
+			width: 15%;
+			height: 100px;
+    		max-height: 100px;
+			position: relative;
+
+			a {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+
+			img {
+				.center-absolute();
+			}
+		}
+
+		&__title {
+			width: 35%;
+			padding-left: 10px;
+
+			a {
+				font-weight: 500;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&__price {
+			width: 15%;
+			padding-left: 10px;
+			white-space: nowrap;
+		}
+
+		&__count {
+			width: 15%;
+		    padding-left: 10px;
+		}
+
+		&__total {
+			width: 15%;
+		    font-weight: 500;
+		    padding-left: 10px;
+		    white-space: nowrap;
+		}
+
+		&__delete {
+			width: 5%;
+			text-align: center;
+			font-size: @body-font-size + 2px;
+
+			a:hover {
+				color: @c-red;
+			}
+		}
+
+		&__property {
+			margin-top: 5px;
+			font-size: @body-font-size - 1px;
+		}
+
+		&__code {
+			margin-top: 5px;
+			font-size: @body-font-size - 2px;
+			color: @c-gray-semi-dark;
+		}
+
+		&__column {
+			display: block;
+
+			@media @700 {
+				width: 100%;
+				padding: 10px 0;
+			    text-align: center;
+			}
+		}
+
+		&__bottom {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 15px 10px;
+		    background: @c-white;
+		    border: 1px solid @c-gray;
+		    border-bottom-left-radius: @border-radius;
+			border-bottom-right-radius: @border-radius;
+
+			@media @700 {
+				flex-wrap: wrap;
+			    text-align: center;
+			}
+
+			&__total {
+				color: @c-red;
+				width: calc(~ '20% - 10px');
+				font-size: @body-font-size + 4px;
+
+				@media @700 {
+					width: 100%
+				}
+			}
+
+			&__promo {
+				@media @700 {
+					width: 100%;
+				}
+
+				.promo-form {
+					display: flex;
+					align-items: center;
+
+					@media @700 {
+						flex-wrap: wrap;
+						justify-content: center;
+					}
+				}
+
+				[type="submit"] {
+					height: 35px;
+				}
+			}
+
+			[type="text"] {
+				margin: 0 10px;
+
+				@media @700 {
+					width: 100%;
+					margin: 5px 0 10px 0;
+				}
+			}
+
+			[type="submit"] {
+				@media @700 {
+					margin-bottom: 25px;
+				}
+			}
+
+		}
+
+		&__checkout {
+		    float: right;
+    		margin-top: 15px;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 20px;
+
+		&__left, &__right {
+			padding: 15px 10px;
+			background: @c-white;
+			border: 1px solid @c-gray;
+			border-radius: @border-radius;
+		}
+
+		&__left, &__right {
+			width: calc(~'50% - 10px');
+
+			@media @700 {
+				width: 100%;
+			}
+		}
+
+		&__right {
+			@media @700 {
+				margin-top: 20px;
+			}
+		}
+
+		&__bottom {
+			width: 100%;
+			margin-top: 25px;
+			text-align: center;
+		}
+
+		textarea, [type="text"], [type="email"] {
+			width: 100%;
+		}
+
+		&__title {
+			padding-bottom: 5px;
+	    	margin-bottom: 10px;
+		    font-size: @body-font-size + 4px;
+	    	border-bottom: 1px dotted @c-gray;
+		}
+
+		&__ul {
+			margin-bottom: 20px;
+		}
+
+		&__delivery-date {
+			margin-bottom: 10px;
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			margin-bottom: 5px;
+
+			label {
+				margin-bottom: 0;
+			}
+		}
+
+		[class*="icon-payment-"] {
+			margin-top: -10px;
+
+			@media @800 {
+				display: none;
+			}
+		}
+
+		.rate-payment {
+		    margin-left: 5px;
+		    font-size: @body-font-size - 2px;
+		    text-transform: lowercase;
+		}
+
+		&__total {
+		    font-size: @body-font-size + 8px;
+		    line-height: @body-font-size + 8px;
+		    font-weight: 500;
+		    margin-bottom: 20px;
+		}
+	}
+}
+
+// fixed bug
+.ui-datepicker {
+	margin: auto;
+}

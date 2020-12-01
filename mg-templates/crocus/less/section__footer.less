@@ -1,0 +1,47 @@
+/* footer
+------------------------------------------------------------------- */
+.j-footer {
+	background: @footer-bg;
+
+	.j-container {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		color: @c-white;
+
+		@media @700 {
+			flex-direction: column;
+		}
+	}
+
+
+
+	&__phone {
+		font-size: 16px;
+		justify-content: flex-end;
+
+		@media @700 {
+			margin-top: 10px;
+		}
+
+		.icon {
+			font-size: 20px;
+			margin-right: 10px;
+		}
+	}
+
+	&__column {
+		display: flex;
+	    align-items: center;
+		width: 50%;
+
+		@media @700 {
+			width: 100%;
+			justify-content: center;
+		}
+	}
+}

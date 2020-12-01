@@ -1,0 +1,50 @@
+/* body
+------------------------------------------------------------------- */
+* {
+    font-family: @body-font-family;
+}
+
+body {
+	display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 100vh;
+    line-height: 125%;
+    color: @body-color;
+    font-size: @body-font-size;
+    //background: @body-bg url(../images/4.png);
+    background-color: @body-bg;
+    background-size: initial !important;
+    background-repeat: repeat !important;
+    background-attachment: initial !important;
+    opacity: 0;
+    .transition();
+}
+
+.j-container {
+	width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 25px;
+
+    @media @800 {
+        padding: 0 15px;
+    }
+
+    @media @700 {
+        padding: 0 10px;
+    }
+
+    &.relative {
+        position: relative;
+    }
+}
+
+@media @1024 {
+    .admin-top-menu {
+        display: none;
+    }
+    .admin-on-site {
+        padding: 0 !important;
+    }
+}

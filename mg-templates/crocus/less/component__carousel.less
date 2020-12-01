@@ -1,0 +1,461 @@
+/* carousel
+------------------------------------------------------------------- */
+.j-carousel {
+    .var () {@root: ~'.j-carousel';}.var;
+    display: none;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    -ms-touch-action: pan-y;
+
+    &__title {
+        width: 100%;
+        margin-top: 35px;
+        position: relative;
+
+        &:before {
+            z-index: 1;
+            display: block;
+            padding: 0 25px;
+            font-size: 22px;
+            position: relative;
+            text-align: center;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        &:after {
+            left: 0;
+            top: 25px;
+            content: '';
+            height: 1px;
+            width: calc(~ '100% - 10px');
+            margin-left: 5px;
+            display: block;
+            position: absolute;
+            background: @body-color;
+        }
+        &--new:before {
+            content: 'Новинки';
+        }
+        &--hit:before {
+            content: 'Хиты продаж';
+        }
+        &--sale:before {
+            content: 'Акции';
+        }
+        &--related:before {
+            content: 'Похожие товары';
+        }
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        cursor: pointer;
+        color: @schema-color;
+        background: @schema;
+        border-radius: @border-radius;
+
+        @media @1025 {
+            opacity: 0;
+            visibility: hidden;
+            .transition();
+
+            &__left {
+                left: 25px;
+            }
+            &__right {
+                right: 25px;
+            }
+        }
+        @media @1024 {
+            &__left {
+                left: 5px;
+            }
+            &__right {
+                right: 5px;
+            }
+        }
+        @media @800 {
+            width: 40px;
+            height: 40px;
+        }
+        &:hover {
+            background: @schema--hover;
+        }
+    }
+    @media @1025 {
+        &:hover {
+            @{root}__button {
+                opacity: 1;
+                visibility: visible;
+
+                &__right {
+                    right: 5px;
+                }
+                &__left {
+                    left: 5px;
+                }
+            }
+        }
+    }
+    .owl {
+        &-next, &-prev {
+            top: 0;
+            height: 100%;
+            position: absolute;
+        }
+        &-next {
+            right: 0;
+        }
+        &-prev {
+            left: 0;
+        }
+        &-item {
+            float: left;
+
+            > div {
+                width: 100%;
+            }
+        }
+        &-controls {
+            user-select: none;
+        }
+        &-wrapper {
+            display: none;
+            position: relative;
+            -webkit-transform: translate3d(0px, 0px, 0px);
+            .clearfix();
+
+            &-outer {
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+            }
+        }
+        &-pagination {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            bottom: 10px;
+            position: absolute;
+
+            > div {
+                padding: 7px;
+                margin: 2px;
+                cursor: pointer;
+                background: transparent;
+                border: 1px solid @schema;
+                border-radius: @border-radius;
+
+                &:active {
+                    transform: translatey(3px);
+                }
+                &.active, &:hover {
+                    background: @schema--hover;
+                }
+            }
+
+            @media @700 {
+                display: none;
+            }
+        }
+    }
+}
+.owl-origin {
+    -webkit-perspective: 1200px;
+    -webkit-perspective-origin-x: 50%;
+    -webkit-perspective-origin-y: 50%;
+    -moz-perspective: 1200px;
+    -moz-perspective-origin-x: 50%;
+    -moz-perspective-origin-y: 50%;
+    perspective: 1200px;
+}
+
+/* fade */
+.owl-fade-out {
+    z-index: 10;
+    -webkit-animation: fadeOut .7s both ease;
+    -moz-animation: fadeOut .7s both ease;
+    animation: fadeOut .7s both ease;
+}
+.owl-fade-in {
+    -webkit-animation: fadeIn .7s both ease;
+    -moz-animation: fadeIn .7s both ease;
+    animation: fadeIn .7s both ease;
+}
+
+/* backSlide */
+.owl-backSlide-out {
+    -webkit-animation: backSlideOut 1s both ease;
+    -moz-animation: backSlideOut 1s both ease;
+    animation: backSlideOut 1s both ease;
+}
+.owl-backSlide-in {
+    -webkit-animation: backSlideIn 1s both ease;
+    -moz-animation: backSlideIn 1s both ease;
+    animation: backSlideIn 1s both ease;
+}
+
+/* goDown */
+.owl-goDown-out {
+    -webkit-animation: scaleToFade .7s ease both;
+    -moz-animation: scaleToFade .7s ease both;
+    animation: scaleToFade .7s ease both;
+}
+.owl-goDown-in {
+    -webkit-animation: goDown .6s ease both;
+    -moz-animation: goDown .6s ease both;
+    animation: goDown .6s ease both;
+}
+
+/* scaleUp */
+.owl-fadeUp-in {
+    -webkit-animation: scaleUpFrom .5s ease both;
+    -moz-animation: scaleUpFrom .5s ease both;
+    animation: scaleUpFrom .5s ease both;
+}
+.owl-fadeUp-out {
+    -webkit-animation: scaleUpTo .5s ease both;
+    -moz-animation: scaleUpTo .5s ease both;
+    animation: scaleUpTo .5s ease both;
+}
+
+/* Keyframes */
+
+/*empty*/
+@-webkit-keyframes empty {
+    0% {
+        opacity: 1
+    }
+}
+@-moz-keyframes empty {
+    0% {
+        opacity: 1
+    }
+}
+@keyframes empty {
+    0% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-moz-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes backSlideOut {
+    25% {
+        opacity: .5;
+        -webkit-transform: translateZ(-500px);
+    }
+    75% {
+        opacity: .5;
+        -webkit-transform: translateZ(-500px) translateX(-200%);
+    }
+    100% {
+        opacity: .5;
+        -webkit-transform: translateZ(-500px) translateX(-200%);
+    }
+}
+@-moz-keyframes backSlideOut {
+    25% {
+        opacity: .5;
+        -moz-transform: translateZ(-500px);
+    }
+    75% {
+        opacity: .5;
+        -moz-transform: translateZ(-500px) translateX(-200%);
+    }
+    100% {
+        opacity: .5;
+        -moz-transform: translateZ(-500px) translateX(-200%);
+    }
+}
+@keyframes backSlideOut {
+    25% {
+        opacity: .5;
+        transform: translateZ(-500px);
+    }
+    75% {
+        opacity: .5;
+        transform: translateZ(-500px) translateX(-200%);
+    }
+    100% {
+        opacity: .5;
+        transform: translateZ(-500px) translateX(-200%);
+    }
+}
+@-webkit-keyframes backSlideIn {
+    0%, 25% {
+        opacity: .5;
+        -webkit-transform: translateZ(-500px) translateX(200%);
+    }
+    75% {
+        opacity: .5;
+        -webkit-transform: translateZ(-500px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0) translateX(0);
+    }
+}
+@-moz-keyframes backSlideIn {
+    0%, 25% {
+        opacity: .5;
+        -moz-transform: translateZ(-500px) translateX(200%);
+    }
+    75% {
+        opacity: .5;
+        -moz-transform: translateZ(-500px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateZ(0) translateX(0);
+    }
+}
+@keyframes backSlideIn {
+    0%, 25% {
+        opacity: .5;
+        transform: translateZ(-500px) translateX(200%);
+    }
+    75% {
+        opacity: .5;
+        transform: translateZ(-500px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0) translateX(0);
+    }
+}
+@-webkit-keyframes scaleToFade {
+    to {
+        opacity: 0;
+        -webkit-transform: scale(.8);
+    }
+}
+@-moz-keyframes scaleToFade {
+    to {
+        opacity: 0;
+        -moz-transform: scale(.8);
+    }
+}
+@keyframes scaleToFade {
+    to {
+        opacity: 0;
+        transform: scale(.8);
+    }
+}
+@-webkit-keyframes goDown {
+    from {
+        -webkit-transform: translateY(-100%);
+    }
+}
+@-moz-keyframes goDown {
+    from {
+        -moz-transform: translateY(-100%);
+    }
+}
+@keyframes goDown {
+    from {
+        transform: translateY(-100%);
+    }
+}
+@-webkit-keyframes scaleUpFrom {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(1.5);
+    }
+}
+@-moz-keyframes scaleUpFrom {
+    from {
+        opacity: 0;
+        -moz-transform: scale(1.5);
+    }
+}
+@keyframes scaleUpFrom {
+    from {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+@-webkit-keyframes scaleUpTo {
+    to {
+        opacity: 0;
+        -webkit-transform: scale(1.5);
+    }
+}
+@-moz-keyframes scaleUpTo {
+    to {
+        opacity: 0;
+        -moz-transform: scale(1.5);
+    }
+}
+@keyframes scaleUpTo {
+    to {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+/* influence on carousel
+------------------------------------------------------------------- */
+.j-carousel__slideset {
+    .owl-item {
+        padding: 0 5px;
+    }
+
+    .owl-wrapper-outer {
+        padding: 10px 0;
+    }
+}

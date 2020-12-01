@@ -1,0 +1,45 @@
+/* modal
+------------------------------------------------------------------- */
+.j-modal {
+	.var () { @root: ~'.j-modal'; }.var;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    opacity: 0;
+    visibility: hidden;
+    .transition();
+
+    &__content {
+        padding: 15px;
+        margin: 0 15px;
+        max-height: 90%;
+        max-width: 600px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: @c-white;
+        border-radius: @border-radius;
+        opacity: 0;
+        .translateY-bottom();
+    }
+    &--open {
+        visibility: visible;
+        opacity: 1;
+
+        @{root}__content {
+            opacity: 1;
+            .translateY-bottom--open();
+        }
+    }
+
+    &__cart__content {
+        width: 600px;
+    }
+}

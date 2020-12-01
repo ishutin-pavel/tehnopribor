@@ -1,0 +1,225 @@
+@import url(../variables.less);
+@import url(../mixins.less);
+
+#logo-circle {
+    fill: @color-scheme-red;
+}
+.default-btn, .addToCart, .mg-pager a, .product-info, .filter-btn, input[type="submit"], button[type="submit"] {
+    background: @color-scheme-red;
+    border-bottom-color: darken(@color-scheme-red, 15%);
+
+    &:hover {
+        background: darken(@color-scheme-red, 7%);
+        border-bottom-color: darken(@color-scheme-red, 25%);
+    }
+}
+.small-cart-icon {
+    background: @color-scheme-red;
+
+    &:hover {
+        background: darken(@color-scheme-red, 7%);
+
+        .countsht {
+            background: darken(@color-scheme-red, 7%);
+        }
+    }
+    .countsht {
+        background: @color-scheme-red;
+    }
+}
+.j-worktime {
+    span, .icon {
+        color: @color-scheme-red;
+    }
+}
+.j-contacts {
+    > .icon {
+        color: @color-scheme-red;
+    }
+}
+.j-login {
+    > a {
+        background: @color-scheme-red;
+
+        &:hover {
+            background: darken(@color-scheme-red, 7%);
+        }
+    }
+}
+@media (max-width:480px) {
+    .j-worktime-search .mg-search-block .search-button {
+        .icon {
+            color: @color-scheme-red;
+        }
+    }
+    .j-mobile-button div {
+        background: @color-scheme-red;
+        border-bottom-color: darken(@color-scheme-red, 15%);
+    }
+}
+.j-index {
+    .j-page-menu {
+        &:before {
+            background-color: @color-scheme-red;
+        }
+    }
+}
+.j-no-index {
+    .j-page-menu {
+        background-color: @color-scheme-red;
+    }
+}
+.mg-pager {
+    li {
+        a {
+            &.active {
+                background: darken(@color-scheme-red, 13%);
+                border-color: darken(@color-scheme-red, 30%);
+            }
+        }
+    }
+}
+.j-switcher {
+    .default-btn {
+        &.active {
+            background: darken(@color-scheme-red, 13%);
+            border-color: darken(@color-scheme-red, 30%);
+        }
+    }
+}
+footer {
+    background: @color-scheme-red;
+}
+.j-static-page article {
+    .j-title span {
+        color: @color-scheme-red;
+    }
+    .j-ul li {
+        &:before {
+            color: @color-scheme-red;
+        }
+    }
+}
+.j-accordion-menu {
+    &__title {
+        background: @color-scheme-red;
+    }
+    &__parent {
+        .icon {
+            color: @color-scheme-red;
+        }
+        &:hover .icon {
+            color: @color-scheme-red;
+        }
+    }
+    .level-1 {
+        &__a {
+            &:before {
+                background: @color-scheme-red;
+            }
+            &:hover {
+                color: @color-scheme-red;
+            }
+        }
+        &.active {
+            > a {
+                color: @color-scheme-red;
+            }
+        }
+        &.open {
+            > .j-accordion-menu__parent .icon {
+                color: @color-scheme-red;
+            }
+        }
+    }
+    .level-2 {
+        &__a {
+            &:hover {
+                color: @color-scheme-red;
+            }
+        }
+        &.active {
+            > a {
+                color: @color-scheme-red;
+            }
+        }
+        &.open {
+            > .j-accordion-menu__parent .icon {
+                color: @color-scheme-red;
+            }
+        }
+    }
+    .level-3 {
+        &__a {
+            &:hover {
+                color: @color-scheme-red;
+            }
+        }
+        &.active {
+            > a {
+                color: @color-scheme-red;
+            }
+        }
+    }
+}
+.j-callme {
+    &__send {
+        background: @color-scheme-red;
+        border-bottom-color: darken(@color-scheme-red, 15%);
+
+        &:hover {
+            background: darken(@color-scheme-red, 7%);
+            border-bottom-color: darken(@color-scheme-red, 25%);
+        }
+    }
+    &__button {
+        color: @color-scheme-red;
+
+        &:hover {
+            color: darken(@color-scheme-red, 15%);
+        }
+    }
+}
+.j-one-click {
+    &__send, &__button {
+        background: @color-scheme-red;
+        border-bottom-color: darken(@color-scheme-red, 15%);
+
+        &:hover {
+            background: darken(@color-scheme-red, 7%);
+            border-bottom-color: darken(@color-scheme-red, 25%);
+        }
+    }
+}
+.j-slider-images, .j-last-views {
+    &__buttons {
+        > div {
+            background: @color-scheme-red;
+
+            &:hover {
+                background: darken(@color-scheme-red, 7%);
+            }
+        }
+    }
+    .owl-pagination {
+        > div {
+            border-color: @color-scheme-red;
+
+            &.active, &:hover {
+                background: @color-scheme-red;
+            }
+        }
+    }
+}
+aside .j-slider-images {
+    &:hover {
+        border-color: @color-scheme-red;
+    }
+}
+.j-related .owl-buttons > div {
+    background: @color-scheme-red;
+
+    &:hover {
+        background: darken(@color-scheme-red, 7%);
+    }
+}

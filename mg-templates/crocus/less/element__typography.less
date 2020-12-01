@@ -1,0 +1,100 @@
+/* typography
+------------------------------------------------------------------- */
+.j-pre  {
+	font-family: monospace !important;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    overflow-x: auto;
+    padding: 15px 0;
+    background: #f0f0f0;
+    border-radius: @border-radius;
+    box-shadow: inset 0 1px 0 0 #ccc, inset 0 0 0 1px #dedede, inset 0 1px 2px 1px #e6e6e6;
+
+    &__title {
+    	font-weight: bold;
+	    margin: 25px 0 15px 0;
+    	text-transform: uppercase;
+    }
+}
+
+.j-typography {
+
+	&__list {
+	    padding-left: 20px;
+
+		li {
+			display: flex;
+			margin-top: 10px;
+
+			&:before {
+				content: "• ";
+				color: @schema;
+				font-size: 24px;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	&__table {
+	    th {
+	    	padding: 10px;
+	    	font-size: 16px;
+	    	font-weight: normal;
+		  	background: @body-bg;
+			border: 1px solid @c-gray;
+		}
+
+		td {
+			padding: 10px;
+			border: 1px solid @c-gray;
+
+			&:first-child, &:last-child {
+				text-align: center;
+			}
+		}
+
+		tr:hover {
+		  background: @body-bg;
+		}
+	}
+
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+
+		&__item {
+
+			height: 50px;
+		    padding: 5px;
+			text-align: center;
+			border: 1px solid @c-gray;
+			border-radius: @border-radius;
+
+			@media @701 {
+	            .grid(9, 10px);
+	        }
+
+	        @media @700 {
+	            .grid(4, 10px);
+	        }
+
+			.icon {
+				width: 100%;
+				height: 100%;
+			}
+
+			&__count {
+				padding: 5px 0;
+
+				@media @700 {
+		            display: none;
+		        }
+			}
+		}
+	}
+
+}
+
+
+

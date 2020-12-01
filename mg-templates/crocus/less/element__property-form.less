@@ -1,0 +1,96 @@
+/* property-form
+------------------------------------------------------------------- */
+.property-form {
+	margin-top: 15px;
+	background: @c-white;
+	border-radius: @border-radius;
+
+	.property {
+		&-title {
+			font-size: 12px;
+		    font-weight: 500;
+		    display: inline-block;
+		    text-transform: uppercase;
+		}
+
+		&-delimiter {
+			margin-right: 5px;
+		}
+	}
+
+	br {
+		display: none;
+	}
+
+	p {
+		margin-bottom: 5px;
+	    padding-bottom: 5px;
+	    border-bottom: 1px dotted @c-gray;
+	}
+
+	select {
+		font-size: 12px;
+	}
+
+	.label-black {
+		font-size: 12px;
+	}
+
+	.hidder-element {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+/* influence on property-form
+------------------------------------------------------------------- */
+.j-page__product {
+	.property-form {
+		padding: 10px;
+	}
+
+	.buy-container {
+		margin-top: 15px;
+	}
+}
+
+.j-compare {
+	.property-form {
+	    left: 0;
+	    top: 100%;
+	    width: 100%;
+	    padding: 10px;
+	    margin-top: -5px;
+	    position: absolute;
+	    border: 1px solid @schema;
+	    border-top: 0;
+	    border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	    .transform-top();
+	}
+
+	&__item:hover .property-form {
+		.transform-top--open();
+	}
+
+	.property-title {
+		font-size: 11px;
+	}
+
+	.property-delimiter {
+		display: none;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+
+	select {
+		width: 100%;
+		margin-bottom: 0;
+	}
+}
+
+.j-goods__list .hidder-element {
+	flex-wrap: nowrap;
+}

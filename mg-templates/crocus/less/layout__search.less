@@ -1,0 +1,124 @@
+/* layout_search
+------------------------------------------------------------------- */
+.j-search {
+	position: relative;
+
+    [type="search"] {
+        width: 100%;
+        height: 40px;
+        padding: 0 10px;
+        padding-right: 110px;
+        margin-bottom: 0;
+
+        @media @1024 {
+            padding-right: 50px;
+        }
+
+        @media @700 {
+            height: 30px;
+            font-size: 12px;
+        }
+    }
+
+    &__button {
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        top: 0;
+        right: 0;
+        height: 40px;
+        width: 100px;
+        font-size: 16px;
+        position: absolute;
+        color: @schema-color;
+        background: @schema;
+        border-top-right-radius: @border-radius;
+        border-bottom-right-radius: @border-radius;
+
+        @media @1024 {
+            width: 40px;
+        }
+
+        @media @700 {
+            height: 30px;
+        }
+
+        &__text {
+            margin-left: 5px;
+
+            @media @1024 {
+                display: none;
+            }
+        }
+
+        &:hover {
+            background: @schema--hover;
+        }
+    }
+
+    &__results {
+        left: 0;
+        width: 100%;
+        position: absolute;
+
+        ul {
+            padding: 10px;
+            z-index: 999;
+            overflow: auto;
+            max-height: 300px;
+            position: relative;
+            background: @c-white;
+            border: 1px solid @c-gray;
+            box-shadow: @box-shadow;
+            border-radius: @border-radius;
+        }
+
+        li {
+            padding: 5px 0;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                border-top-color: @c-gray;
+                border-bottom-color: @c-gray;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+
+        span {
+            display: block;
+            color: @c-red;
+            font-size: 12px;
+            margin-top: 5px;
+            line-height: 15px;
+        }
+
+        .variant-text {
+            margin-top: 0;
+            color: @c-gray-semi-dark;
+        }
+
+        .fast-result-img {
+            width: 50px;
+            height: 50px;
+            position: relative;
+
+            img {
+                .center-absolute();
+            }
+        }
+
+        .fast-result-info {
+            padding-left: 15px;
+            width: calc(~'100% - 50px');
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.top-menu .top-menu-list li .sub_menu,
+.mg-pager ul li a,
+.wrapper .mg-product-to-compare .mg-compare-count,
+.top-auth-block,
+.header .top-menu,
+.filter-form .ui-slider .ui-slider-range,
+.footer-top{
+    background: #E91E63;
+}
+
+.top-menu .top-menu-list li .sub_menu > li > a:hover,
+.top-menu .top-menu-list li:hover > a,
+.mg-pager ul li a:hover,
+.mg-pager ul li a.active {
+    background: #FF216B;
+}
+
+.m-p-slider-wrapper .bx-wrapper .bx-pager.bx-default-pager a,
+.header .mg-desktop-cart .small-cart,
+.header .mg-desktop-cart,
+.wrapper .container .center .personal-tabs-list .ui-state-active,
+.m-p-new-products-title a,
+.m-p-sale-products-title a,
+.m-p-recommended-products-title a,
+.product-details-wrapper .product-tabs li.active a{
+    border: 1px solid #E91E63;
+}
+
+.m-p-new-products-title,
+.m-p-sale-products-title,
+.m-p-recommended-products-title,
+.product-details-wrapper .product-tabs,
+.wrapper .container .center .personal-tabs-list{
+    border-bottom: 1px solid #E91E63;
+}
+
+.product-details-wrapper .product-tabs li a,
+.m-p-new-products-title a,
+.m-p-sale-products-title a,
+.m-p-recommended-products-title a{
+    color: #E91E63;
+}
+
+.wrapper .read-more,
+.wrapper .news-block .news-footer a{
+    color: #FF216B;
+    border: 1px solid #FF216B;
+}
+
+.m-p-slider-wrapper .bx-wrapper .bx-pager.bx-default-pager a.active{
+    border: 1px solid #FF216B;
+    background: #FF216B;
+}

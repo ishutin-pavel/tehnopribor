@@ -1,0 +1,116 @@
+/* layout_topmenu
+------------------------------------------------------------------- */
+@media @1025 {
+	.j-topmenu {
+		.var () { @root: ~'.j-topmenu'; }.var;
+		height: 100%;
+
+		&__content {
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+
+		&__ul {
+			z-index: 99;
+			width: 230px;
+			position: absolute;
+			background: @c-white;
+			border: 1px solid @c-gray;
+			border-radius: @border-radius;
+			box-shadow: @box-shadow;
+
+			&__1 {
+				left: 0;
+				top: 100%;
+				.transform-top();
+			}
+
+			&__2 {
+				top: 0;
+				left: 100%;
+				margin-top: -1px;
+				.transform-left();
+			}
+		}
+
+		&__li {
+			height: 100%;
+			position: relative;
+
+			&__1:hover {
+
+				@{root}__a__1:before {
+					background: @schema;
+				}
+
+				> @{root}__ul {
+					.transform-top--open();
+				}
+			}
+
+			&__2:hover > @{root}__ul {
+				.transform-left--open();
+			}
+
+			&:last-child @{root}__a__1 {
+				margin-right: 0;
+			}
+		}
+
+		&__a {
+			display: flex;
+			align-items: center;
+			.transition();
+
+			&__1 {
+				height: 100%;
+				line-height: 14px;
+				margin-right: 25px;
+				text-align: center;
+				position: relative;
+
+				@media @1025 and @1200 {
+					font-size: 13px;
+					margin-right: 20px;
+				}
+
+				.icon--arrow-right {
+				    display: none; // for offcanvas
+				}
+
+				&:before {
+					width: 100%;
+					height: 3px;
+					content: '';
+					display: block;
+					left: 0;
+					bottom: 0;
+					position: absolute;
+				}
+
+				&.active:before {
+					background: @schema;
+				}
+			}
+
+			&__2, &__3 {
+				padding: 10px;
+				font-size: 13px;
+
+			    &:hover, &.active {
+			    	box-shadow: @left-menu--hover;
+			    }
+			}
+		}
+
+		.j-parent > @{root}__a {
+			justify-content: space-between;
+
+			.icon {
+			    font-size: 11px;
+			    margin-left: 5px;
+			}
+		}
+	}
+}

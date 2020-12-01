@@ -1,0 +1,88 @@
+@import url(../variables.less);
+@import url(../mixins.less);
+
+#logo-circle {
+    fill: @color-scheme-blue;
+}
+.j-accordion-menu {
+    &__title {
+        background: @color-scheme-blue;
+    }
+    &__parent {
+        .icon {
+            color: @color-scheme-blue;
+        }
+        &:hover .icon {
+            color: @color-scheme-blue;
+        }
+    }
+    .level-1 {
+        &__a {
+            &:before {
+                background: @color-scheme-blue;
+            }
+            &:hover {
+                color: @color-scheme-blue;
+            }
+        }
+        &.active {
+            > a {
+                color: @color-scheme-blue;
+            }
+        }
+        &.open {
+            > .j-accordion-menu__parent .icon {
+                color: @color-scheme-blue;
+            }
+        }
+    }
+    .level-2 {
+        &__a {
+            &:hover {
+                color: @color-scheme-blue;
+            }
+        }
+        &.active {
+            > a {
+                color: @color-scheme-blue;
+            }
+        }
+        &.open {
+            > .j-accordion-menu__parent .icon {
+                color: @color-scheme-blue;
+            }
+        }
+    }
+    .level-3 {
+        &__a {
+            &:hover {
+                color: @color-scheme-blue;
+            }
+        }
+        &.active {
+            > a {
+                color: @color-scheme-blue;
+            }
+        }
+    }
+}
+.j-slider-images, .j-last-views {
+    &__buttons {
+        > div {
+            background: @color-scheme-blue;
+
+            &:hover {
+                background: darken(@color-scheme-blue, 7%);
+            }
+        }
+    }
+    .owl-pagination {
+        > div {
+            border-color: @color-scheme-blue;
+
+            &.active, &:hover {
+                background: @color-scheme-blue;
+            }
+        }
+    }
+}

@@ -1,0 +1,250 @@
+/* page personal
+------------------------------------------------------------------- */
+.j-personal {
+	.var () { @root: ~'.j-personal'; }.var;
+
+	&__orders {
+		margin-left: 5px;
+		font-size: @body-font-size;
+
+		&:before {
+			content: '(';
+		}
+
+		&:after {
+			content: ')';
+		}
+	}
+
+	&__item {
+		margin-top: 15px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&--open {
+			@{root}__header {
+				.icon {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 50px;
+		padding: 0 10px;
+		cursor: pointer;
+		background: @c-white;
+		border: 1px solid @c-gray;
+		border-radius: @border-radius;
+
+		@media @700 {
+			flex-wrap: wrap;
+			height: auto;
+			padding: 5px 10px;
+		}
+
+		&__left, &__right {
+			display: flex;
+			align-items: center;
+
+			@media @700 {
+				width: 100%;
+				padding: 5px 0;
+				justify-content: space-between;
+			}
+		}
+
+		&__number {
+			width: 160px;
+			font-weight: 500;
+		}
+
+		&__date {
+			color: @c-gray-dark;
+		    padding-left: 10px;
+		}
+
+		&__status {
+			width: 140px;
+			padding: 3px 0;
+			color: @c-white;
+			margin-right: 15px;
+			text-align: center;
+			border-radius: @border-radius;
+
+			&.dont-confirmed {
+				background: @c-gray-semi-dark;
+			}
+
+			&.get-paid, &.in-delivery, &.processed {
+				background: @c-orange;
+			}
+
+			&.paid, &.performed {
+				background: @c-green;
+			}
+
+			&.dont-paid {
+				background: @c-red;
+			}
+		}
+
+		.icon {
+			.transition();
+		}
+
+		&:hover {
+			box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+		}
+	}
+
+	&__body {
+		display: none;
+	    padding: 10px;
+	    margin-top: -2px;
+	    font-size: @body-font-size - 1px;
+	    background: @c-white;
+	    border: 1px solid @c-gray;
+	    border-bottom-left-radius: @border-radius;
+	    border-bottom-right-radius: @border-radius;
+	}
+
+	&__table {
+		&__row {
+			display: flex;
+			align-items: center;
+			padding-bottom: 5px;
+			margin-bottom: 10px;
+			border-bottom: 1px dotted @c-gray;
+
+			@media @700 {
+				flex-wrap: wrap;
+			}
+		}
+
+		&__title {
+			width: 50%;
+		    font-weight: 500;
+		}
+
+		&__subtitle {
+			font-weight: 400;
+			font-size: @body-font-size - 2px;
+			color: @c-gray-dark;
+		}
+
+		&__code {
+			width: 10%;
+		}
+
+		&__price {
+			width: 15%;
+		}
+
+		&__count {
+			width: 10%;
+		}
+
+		&__total {
+			width: 15%;
+			font-weight: 500;
+		}
+
+		&__column {
+			display: block;
+
+			@media @700 {
+				width: 100%;
+			    padding: 5px 0;
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+
+		@media @700 {
+			flex-wrap: wrap;
+		}
+
+		&__left,  {
+			width: 60%;
+			padding-right: 25px;
+
+			@media @700 {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+
+		&__right {
+			width: 40%;
+
+			@media @700 {
+				width: 100%;
+				margin-top: 10px;
+			}
+		}
+
+		&__row {
+			display: flex;
+		    padding: 10px 0;
+    		border-bottom: 1px dotted @c-gray;
+
+    		&:last-child {
+    			border-bottom: 0;
+    		}
+		}
+
+		&__title {
+			width: 62%;
+
+			@media @700 {
+				width: 50%;
+			}
+		}
+
+		&__value {
+			width: 38%;
+			font-weight: 500;
+
+			@media @700 {
+				width: 50%;
+			}
+		}
+
+		&__total {
+			text-transform: uppercase;
+		}
+
+		&__price {
+			color: @c-red;
+			font-size: @body-font-size + 2;
+		}
+	}
+
+	&__manager {
+	    margin-right: 25px;
+	}
+
+	&__download {
+		font-size: @body-font-size + 2;
+    	margin-top: 10px;
+		display: inline-block;
+
+		.icon {
+			margin-right: 5px;
+		}
+
+		&:hover {
+			color: @c-orange;
+		}
+	}
+}

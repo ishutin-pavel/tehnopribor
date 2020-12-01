@@ -1,0 +1,115 @@
+/* layout_leftmenu
+------------------------------------------------------------------- */
+@media @1025 {
+	.j-leftmenu {
+		.var () { @root: ~'.j-leftmenu'; }.var;
+
+		&__title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 40px;
+		    font-size: 18px;
+		    padding: 0 15px;
+		    color: @schema-color;
+		    background: @schema;
+	    	text-transform: uppercase;
+
+	    	&__icon {
+	    		width: 25px;
+
+	    		div {
+	    			height: 3px;
+	    			margin-bottom: 3px;
+	    			background: @schema-color;
+	    			border-radius: @border-radius;
+
+	    			&:last-child {
+	    				margin-bottom: 0;
+	    			}
+	    		}
+	    	}
+
+	    	&:hover {
+				background: @schema--hover;
+			}
+		}
+
+		&__img {
+	        min-width: 35px;
+	    	min-height: 35px;
+		    margin-left: 5px;
+		    position: relative;
+
+	    	img {
+	    		.center-absolute();
+	    	}
+		}
+
+		&__count {
+		    font-size: 12px;
+			margin-left: 5px;
+		}
+
+		&__content {
+			position: relative;
+			background: @c-white;
+		}
+
+		&__ul {
+			top: 0;
+		    left: 100%;
+		    min-width: 100%;
+		    min-height: 100%;
+		    margin-left: -1px;
+		    position: absolute;
+	        background: @c-white;
+		    box-shadow: inset 0 0 0 1px @c-gray;
+		    .transform-left();
+	        z-index: 99;
+	    }
+
+	    &__li {
+			display: flex;
+			height: 40px;
+			border: 1px solid @c-gray;
+			border-top: 0;
+			.transition();
+
+			&__1:hover > @{root}__ul,
+			&__2:hover > @{root}__ul {
+				.transform-left--open();
+			}
+
+			&:hover, &--active {
+			    border-top-color: transparent;
+    			border-bottom-color: transparent;
+				box-shadow: @left-menu--hover;
+			}
+		}
+
+		&__a {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding: 0 20px 0 15px;
+			position: relative;
+
+			.icon {
+				top: 50%;
+				right: 4px;
+				font-size: 11px;
+				margin-top: -5.5px;
+				position: absolute;
+			}
+
+			&__inner {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			    width: 100%;
+			}
+		}
+	}
+}

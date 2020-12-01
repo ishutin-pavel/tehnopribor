@@ -1,0 +1,225 @@
+@import url(../variables.less);
+@import url(../mixins.less);
+
+#logo-circle {
+    fill: #3A3D41;
+}
+.default-btn, .addToCart, .mg-pager a, .product-info, .filter-btn, input[type="submit"], button[type="submit"] {
+    background: @color-scheme-black;
+    border-bottom-color: darken(@color-scheme-black, 15%);
+
+    &:hover {
+        background: darken(@color-scheme-black, 7%);
+        border-bottom-color: darken(@color-scheme-black, 25%);
+    }
+}
+.small-cart-icon {
+    background: @color-scheme-black;
+
+    &:hover {
+        background: darken(@color-scheme-black, 7%);
+
+        .countsht {
+            background: darken(@color-scheme-black, 7%);
+        }
+    }
+    .countsht {
+        background: @color-scheme-black;
+    }
+}
+.j-worktime {
+    span, .icon {
+        color: @color-scheme-black;
+    }
+}
+.j-contacts {
+    > .icon {
+        color: @color-scheme-black;
+    }
+}
+.j-login {
+    > a {
+        background: @color-scheme-black;
+
+        &:hover {
+            background: darken(@color-scheme-black, 7%);
+        }
+    }
+}
+@media (max-width:480px) {
+    .j-worktime-search .mg-search-block .search-button {
+        .icon {
+            color: @color-scheme-black;
+        }
+    }
+    .j-mobile-button div {
+        background: @color-scheme-black;
+        border-bottom-color: darken(@color-scheme-black, 15%);
+    }
+}
+.j-index {
+    .j-page-menu {
+        &:before {
+            background-color: @color-scheme-black;
+        }
+    }
+}
+.j-no-index {
+    .j-page-menu {
+        background-color: @color-scheme-black;
+    }
+}
+.mg-pager {
+    li {
+        a {
+            &.active {
+                background: darken(@color-scheme-black, 13%);
+                border-color: darken(@color-scheme-black, 30%);
+            }
+        }
+    }
+}
+.j-switcher {
+    .default-btn {
+        &.active {
+            background: darken(@color-scheme-black, 13%);
+            border-color: darken(@color-scheme-black, 30%);
+        }
+    }
+}
+footer {
+    background: @color-scheme-black;
+}
+.j-static-page article {
+    .j-title span {
+        color: @color-scheme-black;
+    }
+    .j-ul li {
+        &:before {
+            color: @color-scheme-black;
+        }
+    }
+}
+.j-accordion-menu {
+    &__title {
+        background: @color-scheme-black;
+    }
+    &__parent {
+        .icon {
+            color: @color-scheme-black;
+        }
+        &:hover .icon {
+            color: @color-scheme-black;
+        }
+    }
+    .level-1 {
+        &__a {
+            &:before {
+                background: @color-scheme-black;
+            }
+            &:hover {
+                color: @color-scheme-black;
+            }
+        }
+        &.active {
+            > a {
+                color: @color-scheme-black;
+            }
+        }
+        &.open {
+            > .j-accordion-menu__parent .icon {
+                color: @color-scheme-black;
+            }
+        }
+    }
+    .level-2 {
+        &__a {
+            &:hover {
+                color: @color-scheme-black;
+            }
+        }
+        &.active {
+            > a {
+                color: @color-scheme-black;
+            }
+        }
+        &.open {
+            > .j-accordion-menu__parent .icon {
+                color: @color-scheme-black;
+            }
+        }
+    }
+    .level-3 {
+        &__a {
+            &:hover {
+                color: @color-scheme-black;
+            }
+        }
+        &.active {
+            > a {
+                color: @color-scheme-black;
+            }
+        }
+    }
+}
+.j-callme {
+    &__send {
+        background: @color-scheme-black;
+        border-bottom-color: darken(@color-scheme-black, 15%);
+
+        &:hover {
+            background: darken(@color-scheme-black, 7%);
+            border-bottom-color: darken(@color-scheme-black, 25%);
+        }
+    }
+    &__button {
+        color: @color-scheme-black;
+
+        &:hover {
+            color: darken(@color-scheme-black, 15%);
+        }
+    }
+}
+.j-one-click {
+    &__send, &__button {
+        background: @color-scheme-black;
+        border-bottom-color: darken(@color-scheme-black, 15%);
+
+        &:hover {
+            background: darken(@color-scheme-black, 7%);
+            border-bottom-color: darken(@color-scheme-black, 25%);
+        }
+    }
+}
+.j-slider-images, .j-last-views {
+    &__buttons {
+        > div {
+            background: @color-scheme-black;
+
+            &:hover {
+                background: darken(@color-scheme-black, 7%);
+            }
+        }
+    }
+    .owl-pagination {
+        > div {
+            border-color: @color-scheme-black;
+
+            &.active, &:hover {
+                background: @color-scheme-black;
+            }
+        }
+    }
+}
+aside .j-slider-images {
+    &:hover {
+        border-color: @color-scheme-black;
+    }
+}
+.j-related .owl-buttons > div {
+    background: @color-scheme-black;
+
+    &:hover {
+        background: darken(@color-scheme-black, 7%);
+    }
+}

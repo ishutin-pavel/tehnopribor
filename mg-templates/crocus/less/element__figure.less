@@ -1,0 +1,58 @@
+/* figure
+------------------------------------------------------------------- */
+.j-figure {
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+
+	&__item {
+		display: flex;
+	    align-items: center;
+		height: 150px;
+		padding: 10px;
+		background: @c-white;
+		border-radius: @border-radius;
+		.transition();
+
+		@media @701 {
+	        .grid(3, 10px);
+	    }
+
+	    @media @700 {
+	        .grid-700(1, 10px);
+	    }
+
+		&:hover {
+			box-shadow: 0 0 0 1px @schema;
+		}
+	}
+
+	&__icon, &__text {
+		display: flex;
+	}
+
+	&__icon {
+		width: 40%;
+		color: @schema;
+		font-size: 100px;
+	}
+
+	&__text {
+		width: 60%;
+	    font-size: 16px;
+	    line-height: 20px;
+	    text-align: center;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    flex-wrap: wrap;
+
+		span {
+		    width: 100%;
+		    font-size: 18px;
+		    font-weight: 500;
+		    margin-bottom: 5px;
+		}
+	}
+}

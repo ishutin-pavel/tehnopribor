@@ -1,0 +1,47 @@
+.top-menu .top-menu-list li .sub_menu,
+.mg-pager ul li a,
+.wrapper .mg-product-to-compare .mg-compare-count,
+.top-auth-block,
+.header .top-menu,
+.filter-form .ui-slider .ui-slider-range,
+.footer-top{
+    background: #607D8B;
+}
+
+.top-menu .top-menu-list li .sub_menu > li > a:hover,
+.top-menu .top-menu-list li:hover > a,
+.mg-pager ul li a:hover,
+.mg-pager ul li a.active {
+    background: #7DA2B5;
+}
+
+.header .mg-desktop-cart .small-cart,
+.header .mg-desktop-cart,
+.wrapper .container .center .personal-tabs-list .ui-state-active,
+.m-p-new-products-title a,
+.m-p-sale-products-title a,
+.m-p-recommended-products-title a,
+.product-details-wrapper .product-tabs li.active a{
+    border: 1px solid #607D8B;
+}
+
+.m-p-new-products-title,
+.m-p-sale-products-title,
+.m-p-recommended-products-title,
+.product-details-wrapper .product-tabs,
+.wrapper .container .center .personal-tabs-list{
+    border-bottom: 1px solid #607D8B;
+}
+
+.product-details-wrapper .product-tabs li a,
+.m-p-new-products-title a,
+.m-p-sale-products-title a,
+.m-p-recommended-products-title a{
+    color: #607D8B;
+}
+
+.wrapper .read-more,
+.wrapper .news-block .news-footer a{
+    color: #607D8B;
+    border: 1px solid #607D8B;
+}

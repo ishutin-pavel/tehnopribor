@@ -1,0 +1,40 @@
+/* to top
+------------------------------------------------------------------- */
+.j-to-top {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	width: 100px;
+    height: 50px;
+	right: 0;
+	bottom: 10%;
+	position: fixed;
+	z-index: 9;
+	cursor: pointer;
+	color: @schema-color;
+	background: @schema;
+	box-shadow: @box-shadow;
+	text-transform: uppercase;
+	border-top-left-radius: @border-radius;
+	border-bottom-left-radius: @border-radius;
+	visibility: hidden;
+
+	&--show {
+		visibility: visible;
+	}
+
+	@media @700 {
+	    width: 70px;
+    	height: 30px;
+    	font-size: 12px;
+	}
+
+	&:hover {
+		background: @schema--hover;
+	}
+
+	&:active {
+		.click();
+	}
+}
+

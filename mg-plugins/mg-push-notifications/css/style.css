@@ -1,0 +1,39 @@
+.entity-table-wrap{
+    margin: 15px 0 0 0;
+}
+
+.text-list {
+
+   
+	list-style-type: none; /* Убираем маркеры */
+	margin: 0px;
+	padding: 0px;
+	 
+}
+
+.list-option{
+
+   
+	list-style-type: none; /* Убираем маркеры */
+	margin: 0px;
+	padding: 0px;
+	 
+}
+
+.section-mg-push-notifications {
+    padding: 15px !important;
+	list-style-type: none !important;
+}
+.section-mg-push-notifications li{
+	list-style-type: none !important;
+}
+
+.property-order-container{
+	padding: 15px;
+    border-bottom: 0px solid #e6e6e6;
+    background: #fffce5;
+}
+textarea[data-name=body]{
+	font-size: 14px;
+    line-height: 30px;
+}

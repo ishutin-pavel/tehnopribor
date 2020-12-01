@@ -1,0 +1,33 @@
+/* pager
+------------------------------------------------------------------- */
+.mg-pager {
+
+	.allPages {
+		margin: 10px 0;
+    	text-align: center;
+	}
+
+	ul {
+		display: flex;
+		justify-content: center;
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 4px;
+			padding: 5px 15px;
+			color: @schema-color;
+			background: @schema;
+			border-radius: @border-radius;
+
+			&:hover, &.active {
+				background: @schema--hover;
+			}
+
+			&:active {
+				.click();
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+/* layout_auth
+------------------------------------------------------------------- */
+.j-login {
+
+	&__bottom {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    &__forgot {
+        margin-left: 25px;
+    }
+
+    &__registration {
+        margin-top: 10px;
+    }
+
+    &__logout {
+        margin-left: 5px;
+
+        @media @700 {
+            margin-left: 10px;
+        }
+    }
+
+    &__enter {
+        .icon {
+            color: @schema-color;
+            font-size: 16px;
+            margin-right: 5px;
+            vertical-align: sub;
+            display: inline-block;
+        }
+    }
+
+    &__enter,
+    &__logout,
+    &__personal {
+        @media @701 {
+            .button()
+        }
+    }
+
+    &__logout,
+    &__personal {
+        @media @701 {
+            padding: 0 15px;
+        }
+    }
+}

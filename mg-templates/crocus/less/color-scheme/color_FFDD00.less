@@ -1,0 +1,191 @@
+@schema:        #F7B73A;
+@schema--hover: darken(@schema, 5%);
+@schema-color:  #ffffff;
+
+// media
+@1280: ~'(max-width: 1280px)';
+@1200: ~'(max-width: 1200px)';
+@1025: ~'(min-width: 1025px)';
+@1024: ~'(max-width: 1024px)';
+@800:  ~'(max-width: 800px)' ;
+@701:  ~'(min-width: 701px)' ;
+@700:  ~'(max-width: 700px)' ;
+@box-shadow:    0 5px 10px rgba(218, 218, 218,.5);
+
+
+/* color_a0b58d
+------------------------------------------------------------------- */
+.j-button,
+.j-to-top,
+.mg-pager ul a,
+.j-callme__send,
+.j-amount__arrow,
+.j-search__button,
+.j-one-click__send,
+.j-one-click__button,
+.j-carousel__button,
+.j-last-views__button,
+.j-slider-images__button,
+button:not(.j-search__button),
+[type="submit"]:not(.j-search__button) {
+	background: @schema;
+    color: @schema-color;
+
+    &:hover  {
+        background: @schema--hover;
+    }
+}
+
+@media @701 {
+	.j-login {
+		&__enter,
+	    &__logout,
+	    &__personal {
+            background: @schema;
+		    color: @schema-color;
+
+		    &:hover  {
+		        background: @schema--hover;
+		    }
+        }
+    }
+}
+
+.j-left-block__title,
+.j-last-views__title,
+.j-compare .property-form,
+.filter-form .mg-filter-body,
+.j-images__slider__item.active,
+.j-carousel .owl-pagination > div,
+.j-slider-images .owl-pagination > div {
+	border-color: @schema;
+}
+
+.j-figure__icon,
+.j-navigator__last,
+.j-callme__button:hover,
+.j-button__compare .icon,
+.j-compare__price__current,
+.j-product__price__current,
+.j-title__static__sub span,
+.j-typography__list li:before,
+.j-contact__visible__img .icon,
+.j-switcher__item:hover:not(.j-switcher__item--active) {
+    color: @schema;
+}
+
+.j-radio.active:before,
+.j-checkbox.active:before,
+.payment-details-list label.active:before {
+	background: @schema;
+}
+
+.mg-pager ul a.active,
+.j-carousel .owl-pagination > div:hover,
+.j-carousel .owl-pagination > div.active,
+.j-slider-images .owl-pagination > div:hover,
+.j-slider-images .owl-pagination > div.active, {
+	background: @schema--hover;
+}
+
+.j-goods__item:hover,
+.j-figure__item:hover,
+.j-categories__item:hover,
+.j-last-views__item:hover,
+.j-sub-categories__item:hover,
+.j-goods:not(.j-goods__list) .j-button__compare {
+	box-shadow: inset 0 0 0 1px @schema;
+}
+
+.j-button__compare:hover {
+    color: @schema--hover;
+}
+
+.j-compare__informer:hover {
+	color: @schema-color;
+	background: @schema--hover;
+}
+
+.j-compare__informer__count {
+	color: @schema-color;
+	background: @schema;
+}
+
+.j-tab__nav.active {
+    border-bottom-color: @schema;
+
+    &:before {
+        border-top-color: @schema;
+    }
+}
+
+.j-tab__nav__a {
+	&.active {
+	    border-bottom-color: @schema;
+
+	    &:before {
+	        border-top-color: @schema;
+	    }
+	}
+}
+
+@media @1025 {
+	.j-leftmenu__title {
+	    color: @schema-color;
+	    background: @schema;
+	}
+
+	.j-leftmenu__title:hover {
+		background: @schema--hover;
+	}
+
+	.j-topmenu__a__1.active:before,
+	.j-topmenu__li__1:hover .j-topmenu__a__1:before {
+		background: @schema;
+	}
+}
+
+@media @1024 {
+    .j-offcanvas__a:hover,
+	.j-offcanvas__a.active {
+		background: @schema;
+	}
+}
+
+.j-cart {
+	&__visible {
+        @media @1025 {
+            .icon--cart {
+                color: @schema;
+            }
+        }
+        @media @1024 {
+            color: @schema-color;
+            background: @schema;
+
+            &__count {
+                background: @schema;
+            }
+
+            &:hover {
+                background: @schema--hover;
+
+                .j-cart__visible__count {
+                    background: @schema--hover;
+                }
+            }
+        }
+    }
+
+    &__dropdown {
+        box-shadow: @box-shadow, inset 0 0 0 2px @schema;
+    }
+
+    &:hover {
+        @media @1025 {
+            .j-cart__visible {
+                color: @schema--hover;
+            }
+        }
+    }
+}

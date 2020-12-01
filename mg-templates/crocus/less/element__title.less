@@ -1,0 +1,50 @@
+/* title
+------------------------------------------------------------------- */
+.j-title {
+	width: 100%;
+	font-size: 24px;
+    line-height: 24px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid @c-gray;
+
+    @media @1024 {
+    	font-size: 20px;
+    	line-height: 22px;
+    }
+
+    @media @700 {
+    	font-size: 20px;
+    	line-height: 20px;
+    }
+
+    &__static {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: normal;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid @c-gray;
+
+        @media @1024 {
+            font-size: 20px;
+            line-height: 22px;
+        }
+
+        @media @700 {
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        &__sub {
+            font-size: 16px;
+            line-height: 16px;
+            margin-top: 25px;
+
+            span {
+                color: @schema;
+            }
+        }
+    }
+}

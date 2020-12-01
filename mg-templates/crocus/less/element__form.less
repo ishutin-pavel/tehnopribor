@@ -1,0 +1,90 @@
+/* form
+------------------------------------------------------------------- */
+textarea,
+[type="url"],
+[type="text"],
+[type="email"],
+[type="search"],
+[type="password"] {
+	height: 35px;
+	padding: 0 10px;
+	background: @form-bg;
+	border-radius: @border-radius;
+	border: 1px solid @form-border;
+
+	&:focus {
+		background: darken(@form-bg, 5%);
+	}
+}
+
+textarea {
+	padding: 10px;
+	height: 130px;
+    max-height: 130px;
+}
+
+select {
+	padding: 5px;
+    border-radius: @border-radius;
+    border: 1px solid @form-border;
+
+    &:focus {
+		background: darken(@form-bg, 2%);
+	}
+}
+
+/* radio & checkbox
+------------------------------------------------------------------- */
+.j-radio,
+.j-checkbox,
+.payment-details-list label {
+	display: flex;
+	align-items: center;
+	padding: 3px 0;
+	font-size: 12px;
+	line-height: 12px;
+	margin-bottom: 5px;
+	position: relative;
+
+	[type="radio"],
+	[type="checkbox"] {
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+
+	&:before {
+		content: '';
+	    display: block;
+	    min-width: 15px;
+	    min-height: 15px;
+	    max-width: 15px;
+	    max-height: 15px;
+	    margin-right: 10px;
+	    background: @c-white;
+	    border: 1px solid @c-gray;
+	    box-shadow: inset 0 0 0 2px @c-white;
+	}
+
+	&:hover:before {
+		background: @c-gray;
+	}
+
+	&.active:before {
+		background: @schema;
+	}
+}
+
+/* influence on radio & checkbox
+------------------------------------------------------------------- */
+.j-product p {
+	.j-radio,
+	.j-checkbox {
+		&:first-of-type {
+			margin-top: 5px;
+		}
+	}
+}

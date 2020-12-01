@@ -1,0 +1,31 @@
+/* view
+------------------------------------------------------------------- */
+.j-view {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 15px 0;
+
+	@media @700 {
+    	margin: 0;
+    }
+
+	&__apply {
+		width: 90%;
+
+		@media @700 {
+	    	width: 100%;
+	    }
+	}
+
+	&__switcher {
+		width: 10%;
+		min-width: 50px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		@media @700 {
+	    	display: none;
+	    }
+	}
+}

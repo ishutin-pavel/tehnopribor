@@ -1,0 +1,105 @@
+/* main
+------------------------------------------------------------------- */
+.j-main {
+	.var () { @root: ~'.j-main'; }.var;
+	display: flex;
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1250px;
+    padding: 25px;
+    padding-top: 0;
+    margin: 0 auto;
+
+    @media @800 {
+        padding: 25px 15px;
+        padding-top: 0;
+    }
+
+    @media @700 {
+        padding: 25px 10px;
+        padding-top: 0;
+    }
+
+    &:before {
+        height: 40px;
+        width: 100%;
+        content: '';
+        left: 0;
+        z-index: -1;
+        display: block;
+        position: absolute;
+        background: @c-white;
+        border-bottom: 1px solid @c-gray;
+
+        @media @1024 {
+            height: 30px;
+        }
+    }
+
+    &__aside {
+        width: 280px;
+        padding-right: 25px;
+        //background: orange;
+
+        @media @1024 {
+            position: absolute;
+            visibility: hidden;
+        }
+    }
+
+    &__article {
+        width: calc(~ '100% - 280px');
+        //background: pink;
+
+        @media @1024  {
+            width: 100%;
+        }
+
+        &__top {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+
+            @media @1024 {
+                height: 30px;
+            }
+
+            .j-block {
+
+                &__mobile {
+                    @media @1025 {
+                        display: none;
+                    }
+
+                    @media @1024 {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                    }
+                }
+
+                &__menu {
+                    height: 100%;
+
+                    @media @1024 {
+                        width: 0;
+                    }
+                }
+
+                &__login {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    width: 190px;
+                    height: 100%;
+
+                    @media @700 {
+                        width: 130px;
+                    }
+                }
+            }
+        }
+    }
+}

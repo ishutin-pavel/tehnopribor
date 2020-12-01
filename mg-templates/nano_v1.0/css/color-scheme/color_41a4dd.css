@@ -1,0 +1,57 @@
+#logo-circle {
+  fill: #41a4dd;
+}
+.j-accordion-menu__title {
+  background: #41a4dd;
+}
+.j-accordion-menu__parent .icon {
+  color: #41a4dd;
+}
+.j-accordion-menu__parent:hover .icon {
+  color: #41a4dd;
+}
+.j-accordion-menu .level-1__a:before {
+  background: #41a4dd;
+}
+.j-accordion-menu .level-1__a:hover {
+  color: #41a4dd;
+}
+.j-accordion-menu .level-1.active > a {
+  color: #41a4dd;
+}
+.j-accordion-menu .level-1.open > .j-accordion-menu__parent .icon {
+  color: #41a4dd;
+}
+.j-accordion-menu .level-2__a:hover {
+  color: #41a4dd;
+}
+.j-accordion-menu .level-2.active > a {
+  color: #41a4dd;
+}
+.j-accordion-menu .level-2.open > .j-accordion-menu__parent .icon {
+  color: #41a4dd;
+}
+.j-accordion-menu .level-3__a:hover {
+  color: #41a4dd;
+}
+.j-accordion-menu .level-3.active > a {
+  color: #41a4dd;
+}
+.j-slider-images__buttons > div,
+.j-last-views__buttons > div {
+  background: #41a4dd;
+}
+.j-slider-images__buttons > div:hover,
+.j-last-views__buttons > div:hover {
+  background: #2695d4;
+}
+.j-slider-images .owl-pagination > div,
+.j-last-views .owl-pagination > div {
+  border-color: #41a4dd;
+}
+.j-slider-images .owl-pagination > div.active,
+.j-last-views .owl-pagination > div.active,
+.j-slider-images .owl-pagination > div:hover,
+.j-last-views .owl-pagination > div:hover {
+  background: #41a4dd;
+}

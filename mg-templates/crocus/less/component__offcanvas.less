@@ -1,0 +1,123 @@
+/* offcanvas
+------------------------------------------------------------------- */
+@media @1024 {
+    .j-offcanvas {
+    	.var () { @root: ~'.j-offcanvas'; }.var;
+        .var () { @root-1: ~'.j-topmenu'; }.var;
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        position: fixed;
+        background: rgba(0, 0, 0, .5);
+        opacity: 0;
+        visibility: hidden;
+        .transition();
+
+        &--open {
+            opacity: 1;
+            visibility: visible;
+
+            @{root}__content {
+                left: 0;
+            }
+        }
+
+        &__content {
+            top: 0;
+            left: -300px;
+            width: 280px;
+            height: 100%;
+            .transition();
+            position: fixed;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: @offcanvas-bg;
+        }
+
+        &__ul:not(@{root-1}__ul) {
+            display: none;
+        }
+
+        &__ul {
+
+            &__1 {
+                background: @offcanvas-ul-1;
+            }
+
+            &__2:not(@{root-1}__ul__2) {
+                background: @offcanvas-ul-2;
+            }
+        }
+
+        &__li--open:not(@{root-1}__li) {
+            > @{root}__a__1,
+            > @{root}__a__2 {
+                .icon {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        @{root-1}__li .icon {
+            transform: rotate(90deg);
+        }
+
+        &__a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            padding: 0 25px 0 15px;
+            position: relative;
+            color: @offcanvas-color;
+            border-top: @offcanvas-border;
+            box-shadow: @offcanvas-shadow;
+            text-shadow: @offcanvas-text;
+
+            &__2 {
+                height: 35px;
+                font-size: 13px;
+                padding-left: 20px;
+            }
+
+            &__3 {
+                height: 30px;
+                font-size: 12px;
+                padding-left: 35px;
+            }
+
+            &__inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+            .icon {
+                top: 50%;
+                right: 7px;
+                font-size: 11px;
+                margin-top: -5.5px;
+                position: absolute;
+                .transition();
+
+                &--arrow-down {
+                    display: none;
+                }
+            }
+
+            &:hover, &.active {
+                color: @c-white;
+                background: @schema;
+            }
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+/* scroll
+------------------------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+
+    &-track {
+    	border-radius: @border-radius;
+    	background: darken(@body-bg, 15%);
+	}
+
+	&-thumb {
+		border-radius: @border-radius;
+	    background: darken(@body-bg, 30%);
+	}
+}
